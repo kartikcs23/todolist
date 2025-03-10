@@ -1,0 +1,31 @@
+<div class="col-md-8 offset-md-5">
+  <h1 style="margin-left: 8px; color:red;">Update Task</h1>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        
+        <mat-label>Title of the Task</mat-label>
+        <input matInput formControlName="title">
+       
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+        
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>Priority</mat-label>
+        <mat-select formControlName="priority">
+          <mat-option value="one">Important</mat-option>
+          <mat-option value="two">Not Important</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button mat-flat-button color="accent">Update</button>
+    <app-toggle style="margin-left: 20px;;"></app-toggle>
+  </form>
+</div>
